@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .font-teko {
+    font-family: 'Teko', sans-serif;
+  }
+
+  /* FIFA / EA FC FUT Shield Card Shape */
+  .fut-card-shield {
+    clip-path: polygon(
+      0% 8%,
+      8% 0%,
+      92% 0%,
+      100% 8%,
+      100% 88%,
+      50% 100%,
+      0% 88%
+    );
+  }
+
+  .fut-card-shield-inner {
+    clip-path: polygon(
+      0% 8%,
+      8% 0%,
+      92% 0%,
+      100% 8%,
+      100% 88%,
+      50% 100%,
+      0% 88%
+    );
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out forwards;
+}
